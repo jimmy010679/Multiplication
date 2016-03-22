@@ -63,22 +63,22 @@
           
       function New99(x) {
            
-      var new_Frag = document.createDocumentFragment(),
-          new_box = document.createElement('div');
+        var new_Frag = document.createDocumentFragment(),
+            new_box = document.createElement('div');
            
-      new_box.setAttribute("class", "m-box");
+        new_box.setAttribute("class", "m-box");
            
-        for ( var a = 1 ; a < 10 ; a++) {     
+          for ( var a = 1 ; a < 10 ; a++) {     
 
-          var new_span = document.createElement('span'),
-              answer = x * a;
+            var new_span = document.createElement('span'),
+                answer = x * a;
          
-          new_span.innerHTML = x + "*" + a + " = " + answer;   
-          new_box.appendChild(new_span);
-        }      
+            new_span.innerHTML = x + "*" + a + " = " + answer;   
+            new_box.appendChild(new_span);
+          }      
   
-        new_Frag.appendChild(new_box);           
-        multiplication.appendChild(new_Frag);    
+          new_Frag.appendChild(new_box);           
+          multiplication.appendChild(new_Frag);    
       }
 
       var multiplication = document.getElementById('multiplication');
