@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>九九乘法表</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, , maximum-scale=1">
+  <style>
+    #multiplication {
+      color: #fff; 
+    }
+    #multiplication::after {
+      display: table;
+      clear: both;
+      content: "";
+    }      
+    #multiplication .m-box {
+      float: left;
+      width: 33%;
+      color: "#fff";
+      text-align: center;
+      padding: 15px 0;
+    }      
+    #multiplication .m-box span {
+      display: block;
+    }
+      
+    #multiplication .m-box:nth-child(1){       
+      background-color: mediumblue;
+    }
+    #multiplication .m-box:nth-child(2) {       
+      background-color: coral;
+    }
+    #multiplication .m-box:nth-child(3) {       
+      background-color: chocolate;
+    }
+    #multiplication .m-box:nth-child(4) {       
+      background-color: mediumaquamarine;
+    }
+    #multiplication .m-box:nth-child(5) {       
+      background-color: tan;
+    }
+    #multiplication .m-box:nth-child(6) {       
+      background-color: deeppink;
+    }
+    #multiplication .m-box:nth-child(7) {       
+      background-color: darkviolet;
+    }
+    #multiplication .m-box:nth-child(8) {       
+      background-color: darkgoldenrod;
+    }
+    #multiplication .m-box:nth-child(9) {       
+      background-color: lightslategrey;     
+    }
+  </style>
+</head>
+<body>
+  <div id="multiplication">
+      <!-- Content -->
+  </div> 
+  <script>        
+    var star = function() {       
+          
+      function New99(x) {
+           
+      var new_Frag = document.createDocumentFragment(),
+          new_box = document.createElement('div');
+           
+      new_box.setAttribute("class", "m-box");
+           
+        for ( var a = 1 ; a < 10 ; a++) {     
+
+          var new_span = document.createElement('span'),
+              answer = x * a;
+         
+          new_span.innerHTML = x + "*" + a + " = " + answer;   
+          new_box.appendChild(new_span);
+        }      
+  
+        new_Frag.appendChild(new_box);           
+        multiplication.appendChild(new_Frag);    
+      }
+
+      var multiplication = document.getElementById('multiplication');
+    
+      for ( var i = 1 ; i < 10 ; i++) {     
+        New99(i);
+      }   
+    }
+    star();    
+  </script>
+</body>
+</html>
