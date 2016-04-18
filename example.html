@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -59,13 +60,11 @@
       <!-- Content -->
   </div> 
   <script>        
-    var star = function() {       
+    var star = (function() {       
           
       function New99(x) {
            
-        var new_Frag = document.createDocumentFragment(),
-            new_box = document.createElement('div');
-           
+        var new_box = document.createElement('div');       
         new_box.setAttribute("class", "m-box");
            
           for ( var a = 1 ; a < 10 ; a++) {     
@@ -75,19 +74,21 @@
          
             new_span.innerHTML = x + "*" + a + " = " + answer;   
             new_box.appendChild(new_span);
-          }      
-  
-          new_Frag.appendChild(new_box);           
-          multiplication.appendChild(new_Frag);    
+          }
+          
+        new_Frag.appendChild(new_box);    
       }
 
-      var multiplication = document.getElementById('multiplication');
-    
-      for ( var i = 1 ; i < 10 ; i++) {     
+      var multiplication = document.getElementById('multiplication'),
+          new_Frag = document.createDocumentFragment();
+
+      for ( var i = 1 ; i < 10 ; i++) {
         New99(i);
-      }   
-    }
-    star();    
+      }
+
+      multiplication.appendChild(new_Frag);
+
+    })(); 
   </script>
 </body>
 </html>
