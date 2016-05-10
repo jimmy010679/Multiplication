@@ -4,4 +4,4 @@
 
 o'_'o 練習練習
 
-[**Demo**](http://jimmy010679.github.io/Multiplication/example.html) 
+[**Demo**](http://jimmy010679.github.io/Multiplication) 
